@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+:root {
+	--primary-color: #f8fcfc;
+	--text-color: #111533;
+	--bg-profile-color:#f8fcfc;
+}
+html {
+	font-size: 10px;
+}
+
+img {
+	width: 100%;
+}
+
+body {
+	font-family: Poppins, sans-serif;
+	background-color: #ffff;
+	color: var(--text-color);
+	margin-bottom: 3rem;
+}
+
+#profile-background {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 38%;
+    background-color:var(--bg-profile-color);
+    z-index: 0;
+}
+
+@media only screen and (max-width: 768px) {
+	#profile-background {
+		height: 48%;
+	}
+}
+
+
+
+.title{
+	color: var(--text-color);
+	font-weight: 600;
+	font-size: 1.8rem;
+}
+
+.item-preTitle{
+	color: var(--text-color);
+	font-weight: 300;
+	font-size: 1rem;
+	text-decoration: underline solid 1px;
+}
+
+.item-title{
+	color: var(--text-color);
+	font-weight: 500;
+	font-size: 1.5rem;
+}
+
+.item-subtitle{
+	color: var(--text-color);
+	font-weight: 300;
+	font-size: 1.3rem;
+}
+
+hr{
+	/* background: var(--text-color); */
+	margin: 1.5rem 0;
+	border: none;
+	border-top: 2px solid rgba(128, 128, 128, 0.5);
+
+}
+
+.description-secondary{
+	font-size: 1.2rem;
+	font-weight: 300;
+	color: var(--text-color);
+}
+
+.description-primary{
+	font-size: 1.2rem;
+	font-weight: 400;
+	color: var(--text-color);
+}
+
+.container{
+    max-width: 1000px;
+	width: 90%;
+	margin: 0 auto;
+	display: grid;
+	padding: 5rem;
+	background: #fff;
+	/* grid-template-columns: 1fr 1fr; */
+	grid-template-columns: 30% 70%;
+	gap: 10rem 5rem;
+}
+
+
+@media only screen and (max-width: 768px) {
+	.container{
+		width: 100%;
+		grid-template-columns: 1fr;
+		padding: 3rem;
+		gap: 5rem;
+	}
+	.group-1,.group-2{
+		gap: 5rem !important;
+	}
+
+	.profile-info,.profile-description{
+		padding-top: 1rem !important;
+	}
+
+	.profile-left{
+		display: flex;
+		margin-bottom: 2rem;
+		justify-content: space-between;
+		align-items:start;
+	}
+
+	.profile-img {
+		max-width: 100px !important;
+	}
+
+}
+
+.group-1,.group-2{
+	display: flex;
+	flex-direction: column;
+	gap: 3rem;
+	flex-direction: column;
+	z-index: 99;
+}
+
+/* Profile */
+.profile{
+	grid-column: 1 / -1;
+	margin-bottom: 2rem;
+	z-index: 99;
+
+	
+}
+
+.profile-container{
+	display: flex;
+	/* gap: 15rem; */
+	gap:17%;
+}
+
+
+.profile-location {
+	padding-top: 0.5rem;
+}
+
+.profile-img {
+	max-width: 60px;
+}
+
+.profile-name{
+	color: var(--text-color);
+	font-weight: 600;
+	font-size: clamp(1.8rem,15vw, 2.5rem);
+	margin-bottom: -0.5rem;
+}
+
+.profile-title{
+	font-size: 1.5rem;
+}
+
+.profile-info,.profile-description{
+	padding-top: 2rem;
+	font-size: 1.2rem;
+	font-weight: 400;
+	color: var(--text-color);
+}
+
+@media only screen and (max-width: 768px) {
+	.profile-container{
+		flex-direction: column;
+	}
+}
+
+/* Info tambahan */
+.info-item{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	line-height: 2;
+}
+
+.info-item-value{
+	text-align: right;
+}
+
+/* Pendidikan */
+
+
+.edu-item{
+	margin-top: 1.5em;
+}
+
+/* Project Experience */
+
+.exp-item{
+	margin-top: 1.5em;
+}
